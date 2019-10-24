@@ -24,6 +24,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -51,18 +53,13 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [
-      _c(
-        "div",
-        {
-          staticClass:
-            "w-full bg-white shadow p-4 flex jusitfy-between absolute z-20"
-        },
-        [
+      _c("div", { staticClass: "w-full bg-white shadow p-4 absolute z-20" }, [
+        _c("div", { staticClass: "container mx-auto flex jusitfy-between" }, [
           _c("div", { staticClass: "p-2" }, [
-            _vm._v("\n\t\t\tInertia-CMS\n\t\t")
+            _vm._v("\n\t\t\t\tInertia-CMS\n\t\t\t")
           ])
-        ]
-      ),
+        ])
+      ]),
       _vm._v(" "),
       _c(
         "div",

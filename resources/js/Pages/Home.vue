@@ -1,8 +1,10 @@
 <template>
 	<div>
-		<div class="w-full bg-white shadow p-4 flex jusitfy-between absolute z-20">
-			<div class="p-2">
-				Inertia-CMS
+		<div class="w-full bg-white shadow p-4 absolute z-20">
+			<div class="container mx-auto flex jusitfy-between">
+				<div class="p-2">
+					Inertia-CMS
+				</div>
 			</div>
 		</div>
 		<div class="w-full bg-gray-200 h-screen flex flex-col justify-between">
