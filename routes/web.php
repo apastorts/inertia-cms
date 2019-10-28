@@ -12,3 +12,6 @@
 */
 
 Route::get('/', 'HomeController@index');
+Route::get('/dashboard', 'HomeController@home')->middleware('auth');
+Route::get('/login', 'HomeController@login');
+Route::post('/login', 'HomeController@authenticate');
