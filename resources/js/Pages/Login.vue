@@ -12,6 +12,9 @@
 				<div class="p-4 text-lg font-bold w-full text-center">
 					Welcome Back
 				</div>
+				<div v-if="$page.error" class="text-red-500 font-bold p-4 text-lg w-full text-center">
+					{{ $page.error }}
+				</div>
 				<form class="mx-auto p-2 flex flex-col justify-between" @submit.prevent="submit">
 					<input type="text" v-model="form.email" placeholder="Email" class="w-full rounded shadow p-4 my-2">
 					<input type="password" v-model="form.password" placeholder="Password" class="w-full rounded shadow p-4 my-2">

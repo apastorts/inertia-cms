@@ -43,7 +43,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"db4d683fa2c419cb6779","1":"9de08a61116e18922ea3"}[chunkId] + ""
+/******/ 		return __webpack_require__.p + "js/" + ({}[chunkId]||chunkId) + ".js?id=" + {"0":"2d3493f68616314b6a96","1":"98a0f612e7cc67515a75","2":"2208a45cf2d8c9879909","3":"1d8bed8f0cad77296202"}[chunkId] + ""
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -14962,21 +14962,37 @@ module.exports = g;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"./Components/Molecules/Menu": [
+		"./resources/js/Pages/Components/Molecules/Menu.vue",
+		1
+	],
+	"./Components/Molecules/Menu.vue": [
+		"./resources/js/Pages/Components/Molecules/Menu.vue",
+		1
+	],
+	"./Dashboard": [
+		"./resources/js/Pages/Dashboard.vue",
+		0
+	],
+	"./Dashboard.vue": [
+		"./resources/js/Pages/Dashboard.vue",
+		0
+	],
 	"./Home": [
 		"./resources/js/Pages/Home.vue",
-		0
+		2
 	],
 	"./Home.vue": [
 		"./resources/js/Pages/Home.vue",
-		0
+		2
 	],
 	"./Login": [
 		"./resources/js/Pages/Login.vue",
-		1
+		3
 	],
 	"./Login.vue": [
 		"./resources/js/Pages/Login.vue",
-		1
+		3
 	]
 };
 function webpackAsyncContext(req) {

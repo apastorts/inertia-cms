@@ -14,13 +14,12 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', 'HomeController@index');
 Route::get('/dashboard', 'HomeController@home')->middleware('auth');
-Route::get('/login', 'HomeController@login');
+Route::get('/login', 'HomeController@login')->name('login');
 Route::post('/login', 'HomeController@authenticate');
 
-foreach(Pages::published() as $page){
+foreach(Page::live()->get() as $page){
 	Route::get($page->link, function() use ($page) {
-		return Inertia::render('Base', compact('page'));
+		return Inertia::render(($page->id == 1 ? 'Home' : 'Base'), compact('page'));
 	});
 }
