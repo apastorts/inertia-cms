@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Inertia\Inertia;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -13,7 +15,8 @@ class HomeController extends Controller
 
 	public function home()
 	{
-		return Inertia::render('Dashboard');
+		$user = Auth::user();
+		return Inertia::render('Dashboard', compact('user'));
 	}
 
 	public function login()
@@ -21,12 +24,17 @@ class HomeController extends Controller
 		return Inertia::render('Login');
 	}
 
-	public function authenticate()
+	public function authenticate(Request $request)
 	{
 		$credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
-            return Inertia::render('Dashboard');
+        	$user = Auth::auth();
+            return Inertia::render('Dashboard', compact('user'));
         }
+
+        $error = "Username or Password is incorrect.";
+
+        return Inertia::render('Login', compact('error'));
 	}	
 }

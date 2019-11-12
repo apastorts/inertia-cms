@@ -13,7 +13,7 @@ class CreateAssetsTable extends Migration
      */
     public function up()
     {
-        Schema::table('assets', function (Blueprint $table) {
+        Schema::create('assets', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
             $table->integer('size');

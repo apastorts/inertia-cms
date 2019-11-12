@@ -13,13 +13,13 @@ class CreatePagesTable extends Migration
      */
     public function up()
     {
-        Schema::table('pages', function (Blueprint $table) {
+        Schema::create('pages', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title');
             $table->longText('content')->nullable();
             $table->integer('category_id')->nullable();
             $table->string('metadata')->nullable();
-            $table->string('link');
+            $table->string('link')->unique();
             $table->boolean('menu')->default(false);
             $table->boolean('post')->default(false);
             $table->string('slug');

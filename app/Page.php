@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Page extends Model
 {
-    use Notifiable;
-
     public function author()
     {
         $this->hasOne(User::class, 'created_by');
@@ -18,15 +16,15 @@ class Page extends Model
         $this->hasOne(Category::class);
     }
 
-    public function posts(Builder $builder){
-        return $builder->where('post', true);
+    public function scopePosts($query){
+        return $query->where('post', true);
     }
 
-    public function live(Builder $builder){
-        return $builder->where('published', true);
+    public function scopeLive($query){
+        return $query->where('published', true);
     }
 
-    public function drafts(Builder $builder){
-        return $builder->where('published', false);
+    public function scopeDrafts($query){
+        return $query->where('published', false);
     }
 }
