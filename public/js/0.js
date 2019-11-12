@@ -28,6 +28,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -83,50 +84,69 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("div", { staticClass: "w-full bg-white shadow p-4 absolute z-20" }, [
-      _c("div", { staticClass: "container mx-auto flex justify-between" }, [
-        _c("div", { staticClass: "p-2" }, [
-          _vm._v("\n\t\t\t\tMomentum CMS\n\t\t\t")
-        ]),
-        _vm._v(" "),
-        _vm.$page.user
-          ? _c(
-              "div",
-              { staticClass: "p-2" },
-              [
-                _c(
-                  "inertia-link",
-                  {
-                    staticClass:
-                      "p-2 text-orange-400 hover:text-orange-500 font-bold",
-                    attrs: { href: "/pages" }
-                  },
-                  [_vm._v("Pages")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "inertia-link",
-                  {
-                    staticClass:
-                      "p-2 text-orange-400 hover:text-orange-500 font-bold",
-                    attrs: { href: "/posts" }
-                  },
-                  [_vm._v("Posts")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "inertia-link",
-                  {
-                    staticClass:
-                      "ml-4 w-4 h-4 px-2 py-3 bg-orange-500 shadow rounded-full text-white font-bold",
-                    attrs: { href: "/profile" }
-                  },
-                  [_vm._v(" " + _vm._s(_vm.profile) + " ")]
-                )
-              ],
-              1
-            )
-          : _vm._e()
-      ])
+      _c(
+        "div",
+        { staticClass: "container mx-auto flex justify-between" },
+        [
+          _c(
+            "inertia-link",
+            {
+              staticClass: "block p-2 flex justify-between",
+              attrs: { href: "/" }
+            },
+            [
+              _c("img", {
+                staticClass: "w-16 mr-2",
+                attrs: { src: "/images/mini_logo.png" }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "mt-1 p-2 font-bold" }, [
+                _vm._v("Momentum")
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _vm.$page.user
+            ? _c(
+                "div",
+                { staticClass: "p-4" },
+                [
+                  _c(
+                    "inertia-link",
+                    {
+                      staticClass:
+                        "p-2 text-orange-400 hover:text-orange-500 font-bold",
+                      attrs: { href: "/pages" }
+                    },
+                    [_vm._v("Pages")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "inertia-link",
+                    {
+                      staticClass:
+                        "p-2 text-orange-400 hover:text-orange-500 font-bold",
+                      attrs: { href: "/posts" }
+                    },
+                    [_vm._v("Posts")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "inertia-link",
+                    {
+                      staticClass:
+                        "ml-4 w-4 h-4 px-2 py-3 bg-orange-500 shadow rounded-full text-white font-bold",
+                      attrs: { href: "/profile" }
+                    },
+                    [_vm._v(" " + _vm._s(_vm.profile) + " ")]
+                  )
+                ],
+                1
+              )
+            : _vm._e()
+        ],
+        1
+      )
     ]),
     _vm._v(" "),
     _c(

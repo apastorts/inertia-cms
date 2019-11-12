@@ -1,14 +1,6 @@
 <template>
-	<div>
-		<div class="w-full bg-white shadow p-4 absolute z-20">
-			<div class="container mx-auto flex jusitfy-between">
-				<div class="p-2">
-					Momentum CMS
-				</div>
-			</div>
-		</div>
-		<div class="pt-32">
-			<div class="w-2/3 md:w-1/3 mx-auto bg-white shadow p-4">
+	<menu class="pt-32">
+		<div class="w-2/3 md:w-1/3 mx-auto bg-white shadow p-4">
 				<div class="p-4 text-lg font-bold w-full text-center">
 					Welcome Back
 				</div>
@@ -21,12 +13,14 @@
 					<button class="my-2 w-full bg-orange-500 hover:bg-orange-600 text-white font-bold text-center p-4 shadow" >Log In</button>
 				</form>
 			</div>
-		</div>
-	</div>
+	</menu>
 </template>
 
 <script>
+	import Menu from './Components/Molecules/Menu';
+
 	export default{
+		layout: Menu,
 		data(){
 			return {
 				form: {
